@@ -22,7 +22,7 @@ export function useApplications() {
     return applications.filter(app => app.jobId === jobId);
   };
 
-  const applyForJob = (jobId, applicantId, coverLetter) => {
+  const applyForJob = (jobId, applicantId, coverLetter, email) => {
     // Check if already applied
     if (applications.find(app => app.jobId === jobId && app.applicantId === applicantId)) {
       return { success: false, message: "Already applied for this job." };
@@ -32,6 +32,7 @@ export function useApplications() {
       id: Date.now().toString(),
       jobId,
       applicantId,
+      email,
       coverLetter,
       status: 'pending', // pending, reviewed, accepted, rejected
       appliedAt: new Date().toISOString()

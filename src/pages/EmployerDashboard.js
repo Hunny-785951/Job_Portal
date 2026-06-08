@@ -12,6 +12,14 @@ export function EmployerDashboard() {
   const { currentUser } = useAuth();
   const [selectedApp, setSelectedApp] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [allUsers, setAllUsers] = useState([]);
+  
+  React.useEffect(() => {
+    const usersStr = localStorage.getItem('recruit_users');
+    if (usersStr) {
+      setAllUsers(JSON.parse(usersStr));
+    }
+  }, []);
   const { jobs, deleteJob } = useJobs();
   const { applications, updateApplicationStatus } = useApplications();
   
@@ -26,7 +34,8 @@ export function EmployerDashboard() {
     const searchLower = searchQuery.toLowerCase();
     
     const applicantId = app.applicantId || '';
-    const email = app.email || '';
+    const applicantUser = allUsers.find(u => u.id === app.applicantId);
+    const email = app.email || (applicantUser ? applicantUser.email : '');
     
     return applicantId.toLowerCase().includes(searchLower) || 
            jobTitle.includes(searchLower) ||
@@ -119,7 +128,9 @@ export function EmployerDashboard() {
                       <tr key={app.id} className={`reveal delay-${(idx % 5) * 100 + 100}`}>
                         <td>
                           <div className="font-semibold">{app.applicantId}</div>
-                          <div className="text-sm text-secondary">{app.email}</div>
+                          <div className="text-sm text-secondary">
+                            {app.email || (allUsers.find(u => u.id === app.applicantId)?.email) || 'No Email'}
+                          </div>
                         </td>
                         <td>{job ? job.title : 'Unknown Job'}</td>
                         <td>{new Date(app.appliedAt).toLocaleDateString()}</td>
@@ -156,7 +167,7 @@ export function EmployerDashboard() {
               <div>
                 <h4 className="text-lg mb-1">Applicant Details</h4>
                 <p className="text-secondary mb-1"><strong>ID:</strong> {selectedApp.applicantId}</p>
-                <p className="text-secondary"><strong>Email:</strong> {selectedApp.email}</p>
+                <p className="text-secondary"><strong>Email:</strong> {selectedApp.email || (allUsers.find(u => u.id === selectedApp.applicantId)?.email) || 'Not Available'}</p>
               </div>
               <div className="text-right">
                 <span className={`status-badge ${selectedApp.status} mb-2 block`}>
@@ -175,7 +186,7 @@ export function EmployerDashboard() {
               </div>
             </div>
 
-            <div className="flex gap-4 mt-8 pt-6 border-t justify-end" style={{borderTop: '1px solid var(--border-color)'}}>
+            <div className="flex gap-4 mt-8 pt-6 border-t justify-center" style={{borderTop: '1px solid var(--border-color)'}}>
               <Button size="md" variant="ghost" onClick={closeModal}>Cancel</Button>
               <Button size="md" variant="outline" onClick={() => {
                 handleStatusChange(selectedApp.id, 'reviewed');

@@ -32,7 +32,7 @@ export function ApplyJob() {
       return;
     }
 
-    const result = applyForJob(job.id, currentUser.id, coverLetter);
+    const result = applyForJob(job.id, currentUser.id, coverLetter, currentUser.email);
     if (result.success) {
       setSuccess(true);
       setTimeout(() => {
