@@ -95,6 +95,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 This project is open-source and available under the [MIT License](LICENSE).
 
 <div align="right">
-<li> Built by : Himesh M. Solanki </li>
-<li> InternID : CITS3961 </li>
+<li> <i> Built by : Himesh M. Solanki </i> </li>
+<li> <i> InternID : CITS3961 </i> </li>
 </div>
