@@ -1,0 +1,62 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar-container {
+  height: 4rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.user-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background-color: var(--border-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* In a real app, we'd add a hamburger menu */
+  }
+}

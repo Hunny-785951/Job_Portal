@@ -1,0 +1,69 @@
+.auth-page {
+  min-height: calc(100vh - 4rem - 12rem); /* roughly screen height minus navbar and footer */
+  padding: 4rem 1.5rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  padding: 2.5rem;
+}
+
+.auth-header {
+  margin-bottom: 2rem;
+}
+
+.auth-header h2 {
+  font-size: 1.75rem;
+}
+
+.auth-header p {
+  color: var(--text-secondary);
+}
+
+.auth-alert {
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.auth-alert.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+
+.role-selector {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.role-option {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.role-option:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.role-option.active {
+  background-color: rgba(79, 70, 229, 0.1);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}

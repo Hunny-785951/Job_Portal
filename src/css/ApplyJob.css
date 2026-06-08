@@ -1,0 +1,24 @@
+.apply-page {
+  padding: 3rem 1.5rem;
+  min-height: calc(100vh - 4rem - 12rem);
+}
+
+.apply-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 2.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea-field {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.success-icon {
+  font-size: 4rem;
+}

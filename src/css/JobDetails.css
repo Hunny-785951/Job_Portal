@@ -1,0 +1,84 @@
+.job-details-page {
+  padding: 3rem 1.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.back-link:hover {
+  color: var(--primary-color);
+}
+
+.job-details-content {
+  padding: 3rem;
+  border-radius: var(--radius-xl);
+}
+
+.job-header-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.job-title-large {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.job-company-large {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.job-meta {
+  background-color: rgba(0, 0, 0, 0.02);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.meta-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.job-description-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.description-content {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .job-header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .job-details-content {
+    padding: 1.5rem;
+  }
+}

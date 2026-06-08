@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# 🚀 React Recruitment Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, highly responsive, and interactive **Job Portal Web Application** built with React. This platform bridges the gap between companies looking for top talent and professionals seeking their next big opportunity. 
 
-## Available Scripts
+Featuring a sleek **Glassmorphism** UI, dynamic scroll animations, and a centralized role-based dashboard system, this project provides a premium user experience from end to end.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 👤 Role-Based Access
+- **Candidates**: Browse open positions, view detailed job descriptions, submit applications with cover letters, and track application statuses via a personal dashboard.
+- **Employers (Admin)**: Post new job openings, manage active listings, and utilize a powerful global dashboard to review applications via an interactive Data Table and Pop-up Modal system.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🎨 Premium UI & Animations
+- **Glassmorphism Design**: Clean, frosted-glass aesthetics utilizing a vibrant **Slate & Teal** color palette.
+- **Scroll Reveal Animations**: Custom React hooks utilizing `IntersectionObserver` for highly performant, staggered fade-in animations as the user scrolls.
+- **Responsive Layout**: Fluid design that works flawlessly on mobile, tablet, and desktop devices.
 
-### `npm test`
+### ⚙️ Core Functionality
+- **User Profiles**: Centralized profile management where users can edit their bio, portfolio links, phone numbers, and upload interactive profile avatars.
+- **Real-time Search**: Instantaneous search filtering on the Employer Dashboard to quickly find applications by Job Title, Email, or Applicant ID.
+- **Data Persistence**: State management entirely driven by Context API and synchronized with `localStorage` for a seamless, backend-free simulation.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Technology Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend Framework**: React 18
+- **Routing**: React Router DOM (v6)
+- **Styling**: Vanilla CSS (CSS Variables, Flexbox, CSS Grid)
+- **State Management**: React Context API & Hooks (`useState`, `useEffect`)
+- **Storage**: Browser `localStorage`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Getting Started
 
-### `npm run eject`
+Follow these steps to set up the project locally on your machine.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the repository** (if applicable):
+   ```bash
+   git clone https://github.com/your-username/job-portal.git
+   cd job-portal
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **View the app**:
+   Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will automatically reload when you make changes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📂 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```text
+job-portal/
+├── public/               # Static assets
+└── src/
+    ├── components/       # Reusable UI components (Navbar, JobCard, Modal, Button)
+    ├── context/          # React Context (AuthContext for user state)
+    ├── css/              # Vanilla CSS stylesheets and Design System variables
+    ├── hooks/            # Custom React Hooks (useJobs, useApplications, useScrollReveal)
+    ├── pages/            # Main page layouts (Home, Profile, Dashboards, Login)
+    ├── App.js            # Core routing and application wrapper
+    └── index.js          # React entry point
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📝 Usage Guide (Demo Data)
+Upon loading the application for the first time, a suite of **mock jobs** will be automatically seeded into your browser's local storage so you can test the platform immediately. 
+- Create a test account by clicking **Sign Up**.
+- Choose your role (**Candidate** or **Employer**) to experience the different dashboards.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 License
+This project is open-source and available under the [MIT License](LICENSE).
