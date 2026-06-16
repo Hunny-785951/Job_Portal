@@ -1,5 +1,7 @@
 # 🚀 React Recruitment Portal
 
+![Home Page Screenshot](public/screenshots/home_page.png)
+
 A modern, highly responsive, and interactive **Job Portal Web Application** built with React. This platform bridges the gap between companies looking for top talent and professionals seeking their next big opportunity. 
 
 Featuring a sleek **Glassmorphism** UI, dynamic scroll animations, and a centralized role-based dashboard system, this project provides a premium user experience from end to end.
@@ -10,7 +12,12 @@ Featuring a sleek **Glassmorphism** UI, dynamic scroll animations, and a central
 
 ### 👤 Role-Based Access
 - **Candidates**: Browse open positions, view detailed job descriptions, submit applications with cover letters, and track application statuses via a personal dashboard.
+  
+  ![Candidate Dashboard Screenshot](public/screenshots/candidate_dashboard.png)
+
 - **Employers (Admin)**: Post new job openings, manage active listings, and utilize a powerful global dashboard to review applications via an interactive Data Table and Pop-up Modal system.
+  
+  ![Employer Dashboard Screenshot](public/screenshots/employer_dashboard.png)
 
 ### 🎨 Premium UI & Animations
 - **Glassmorphism Design**: Clean, frosted-glass aesthetics utilizing a vibrant **Slate & Teal** color palette.
@@ -69,6 +76,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
 ```text
 job-portal/
 ├── public/               # Static assets
+├── screenshots/          # Application screenshots
 └── src/
     ├── components/       # Reusable UI components (Navbar, JobCard, Modal, Button)
     ├── context/          # React Context (AuthContext for user state)
